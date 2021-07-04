@@ -18,18 +18,6 @@ _G.MACRO_TOGGLE = true;
 _G.MIN_SPEED = 0.03;
 _G.MAX_SPEED = 0.05;
 
-_G.Keys = {
-    --[[
-        Make sure the last item on the Keys list doesn't have a comma.
-        FORMAT: Key = 'Name',
-
-        Ignore: <field: Key: string = Spell>       
-    ]]
-	Z = 'Avada Kedavra',
-	X = 'Duro',
-	C = 'Glacius'
-};
-
 function DisplayWords(message)
 	PlaceholderText.Text = '';
 	ChatBar.Text = 'To chat click here or press "/" key'
