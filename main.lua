@@ -30,7 +30,7 @@ _G.Keys = {
 	C = 'Glacius'
 };
 
-function DisplayWords(message: string)
+function DisplayWords(message)
 	PlaceholderText.Text = '';
 	ChatBar.Text = 'To chat click here or press "/" key'
 	
@@ -63,7 +63,7 @@ function DisplayWords(message: string)
 
 end
 
-function InputBegan(Input: InputObject, GPE: boolean)
+function InputBegan(Input, GPE)
 	if GPE then return nil end
 	if not _G.MACRO_TOGGLE then return nil end
 
@@ -79,4 +79,9 @@ function InputBegan(Input: InputObject, GPE: boolean)
 	end
 end
 
+function onFocus()
+    ChatBar.Text = '';
+end
+
 UIS.InputBegan:Connect(InputBegan);
+ChatBar.Focused:Connect(onFocus);
