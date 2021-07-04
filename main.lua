@@ -18,7 +18,7 @@ _G.MACRO_TOGGLE = true;
 _G.MIN_SPEED = 0.03;
 _G.MAX_SPEED = 0.05;
 
-local Keys = {
+_G.Keys = {
     --[[
         Make sure the last item on the Keys list doesn't have a comma.
         FORMAT: Key = 'Name',
@@ -68,7 +68,7 @@ function InputBegan(Input: InputObject, GPE: boolean)
 	if not _G.MACRO_TOGGLE then return nil end
 
 	if Input.UserInputType == Enum.UserInputType.Keyboard then
-		for i, v in pairs(Keys) do
+		for i, v in pairs(_G.Keys) do
 			local Key = i;
 			local Spell = v;
 
